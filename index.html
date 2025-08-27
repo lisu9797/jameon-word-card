@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 말씀 카드 - 잠언베이글</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cafe Header -->
+    <header class="cafe-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="cafe-logo-text">
+                    <div class="joyful-text">JOYFUL EVERYDAY</div>
+                    <div class="jameon-text">JAMEON BAGEL</div>
+                    <div class="characters">👫</div>
+                </div>
+                <div class="cafe-info">
+                    <h1 class="cafe-name">잠언베이글</h1>
+                    <p class="cafe-subtitle">말씀과 함께하는 따뜻한 시간</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p class="cafe-address">경남 거제시 계룡로7길 19-1</p>
+                <p class="cafe-instagram">@cafe_jameon</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <!-- Screen 1: Start/Instructions Page -->
+        <div id="start-page" class="screen active">
+            <div class="card main-card">
+                <h3 class="main-title">🎨 나만의 '오늘의 말씀 카드' 만들기</h3>
+                <p class="tagline">말씀과 함께하는 따뜻한 시간</p>
+                <p class="description">오늘 당신의 마음에 찾아온 특별한 말씀을 세상에 하나뿐인 카드로 만들어 간직해 보세요.</p>
+                
+                <!-- Enhanced Manual Section -->
+                <div class="manual-section">
+                    <h4 class="manual-title">📖 카드 만들기 가이드</h4>
+                    <div class="manual-steps">
+                        <div class="manual-step">
+                            <span class="step-number">1️⃣</span>
+                            <span class="step-text">마음 상태 선택하기</span>
+                        </div>
+                        <div class="manual-step">
+                            <span class="step-number">2️⃣</span>
+                            <span class="step-text">말씀 받기 (30개씩 제공)</span>
+                        </div>
+                        <div class="manual-step">
+                            <span class="step-number">3️⃣</span>
+                            <span class="step-text">고품질 이미지로 저장하기</span>
+                        </div>
+                        <div class="manual-step">
+                            <span class="step-number">4️⃣</span>
+                            <span class="step-text">프린트하거나 간직하기</span>
+                        </div>
+                    </div>
+                    <div class="verse-count-info">
+                        <p>🌟 총 <strong>360개</strong>의 말씀이 준비되어 있습니다!</p>
+                        <p>각 감정마다 <strong>30개</strong>의 특별한 말씀을 만나보세요.</p>
+                    </div>
+                </div>
+                
+                <button id="start-button" class="btn btn--primary btn--full-width">
+                    시작하기
+                </button>
+            </div>
+        </div>
+
+        <!-- Screen 2: Mood Selection Page -->
+        <div id="mood-selection-page" class="screen">
+            <div class="mood-selection-container">
+                <div class="screen-header">
+                    <button id="home-from-mood" class="btn-home">🏠 처음으로</button>
+                </div>
+                <h1 class="screen-title">오늘 당신의 마음은 어떤가요?</h1>
+                <p class="screen-subtitle">마음을 나타내는 아이콘을 선택해주세요. (각 30개 말씀)</p>
+                <div id="mood-buttons-container" class="mood-grid">
+                    <!-- Mood buttons will be injected here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Verse Display Page -->
+        <div id="verse-display-page" class="screen">
+            <div class="screen-header">
+                <button id="home-from-verse" class="btn-home">🏠 처음으로</button>
+            </div>
+            <div class="card verse-card">
+                <div class="verse-mood-indicator">
+                    <span id="current-mood-icon" class="mood-display-icon"></span>
+                    <span id="current-mood-name" class="mood-display-name"></span>
+                </div>
+                
+                <div id="verse-content" class="verse-content">
+                    <p id="verse-text" class="verse-text"></p>
+                    <p id="verse-source" class="verse-source"></p>
+                </div>
+                
+                <p class="quote-text">"이 말씀을 두 장의 카드에 적어<br>한 장은 벽에, 한 장은 당신의 주머니에 간직하세요."</p>
+
+                <!-- Enhanced Share Options -->
+                <div class="share-section">
+                    <h4 class="share-title">🎨 고품질 이미지로 간직하기</h4>
+                    <div class="share-buttons">
+                        <button id="create-image-button" class="btn btn--share btn--image">
+                            🖼️ 이미지 다운로드 (1080x1080)
+                        </button>
+                    </div>
+                    <p class="share-description">SNS 공유 최적화된 고품질 카드로 저장됩니다.</p>
+                </div>
+
+                <button id="another-verse-button" class="btn btn--primary btn--full-width btn-margin">
+                    다른 말씀 추천하기
+                </button>
+                <button id="back-button" class="btn btn--secondary btn--full-width">
+                    다른 마음 선택하기
+                </button>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- Cafe Footer -->
+    <footer class="cafe-footer">
+        <div class="footer-content">
+            <div class="cafe-details">
+                <h3 class="footer-cafe-name">잠언베이글</h3>
+                <p class="footer-tagline">성경 말씀과 수제 베이글의 만남</p>
+                <div class="contact-details">
+                    <p class="operating-hours">⏰ 매일 09:00-21:00</p>
+                    <p class="phone-number">📞 055-636-4557 / 010-2967-4557</p>
+                    <p class="address">📍 경남 거제시 계룡로7길 19-1</p>
+                    <p class="social-links">📲 @cafe_jameon</p>
+                </div>
+            </div>
+            <div class="footer-hashtags">
+                <span class="hashtag">#잠언베이글</span>
+                <span class="hashtag">#거제카페</span>
+                <span class="hashtag">#오늘의말씀카드</span>
+                <span class="hashtag">#성경말씀</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden Canvas for Image Generation -->
+    <canvas id="verse-canvas" style="display: none;"></canvas>
+
+    <!-- Share Success Modal -->
+    <div id="share-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">완료!</h3>
+                <button id="modal-close" class="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">이미지가 다운로드되었습니다.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-ok" class="btn btn--primary">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
